@@ -20,17 +20,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.vertx.demo</groupId>
-  <artifactId>musicstore</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <groupId>io.vertx.mddwg</groupId>
+  <artifactId>oxappstream</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>account-oxapp-vertx-service</module>
+    </modules>
 
-  <properties>
+    <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <vertx-stack.version>3.6.2</vertx-stack.version>
     <!-- Vert.x Main Verticle which will be used to start the application -->
-    <vertx.verticle>io.vertx.demo.musicstore.MusicStoreVerticle</vertx.verticle>
+    <vertx.verticle>io.vertx.mddwg.oxappstream.OxAppVerticle</vertx.verticle>
   </properties>
 
   <dependencyManagement>
@@ -104,11 +108,6 @@
       <artifactId>vertx-auth-jdbc</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-rx</artifactId>
-      <version>1.5.0</version>
-    </dependency>
-    <dependency>
       <groupId>com.github.akarnokd</groupId>
       <artifactId>rxjava2-interop</artifactId>
       <version>0.11.0</version>
@@ -132,7 +131,7 @@
   </dependencies>
 
   <build>
-    <finalName>vertx-musicstore</finalName>
+    <finalName>ox-vertx-app</finalName>
     <plugins>
       <plugin>
         <groupId>io.reactiverse</groupId>

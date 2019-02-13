@@ -2,9 +2,9 @@ FROM openjdk:8-jre-alpine
 
 RUN apk add --update curl && rm -rf /var/cache/apk/*
 
-ENV APP_HOME /opt/vertx-musicstore
+ENV APP_HOME /opt/ox_vertx_app
 ENV APP_SCRIPT start.sh
-ENV APP_FILE vertx-musicstore.jar
+ENV APP_FILE ox-vertx-app.jar
 ENV APP_CONF conf.json
 
 EXPOSE 8080
